@@ -8,8 +8,8 @@ async def send_msg(msg, usr_msg, is_private):
     except Exception as err:
         print(err)
 
-def run_discord_bot():
-    TOKEN = "TOKEN_HERE"
+def run_discord_bot(token):
+    TOKEN = token
 
     intents = discord.Intents.default()
     intents.message_content = True
