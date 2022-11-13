@@ -1,11 +1,10 @@
-class TeamsView():
-    def __init__(self, teams) -> None:
-        self.teams = teams
-        pass
+from domain.view import View
 
-    def createOutput(self) -> str:
-        output = "**NHL Teams**:\n```"
-        for team in self.teams:
-            output += f'{team.name}: {team.id}\n'
-        output += "```"
-        return output
+class TeamsView(View):
+
+    def prepareOutput(self) -> None:
+        self.addLine("**NHL Teams:**")
+        self.startCodeBlock()
+        for team in self.input:
+            self.addLine(f'{team.name}: {team.id}')
+        self.endCodeBlock
