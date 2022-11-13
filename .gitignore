@@ -1,3 +1,5 @@
 .vscode
 .git
-__pychache__
+*.pyc
+*.pyo
+__pycache__/
