@@ -2,7 +2,6 @@ class View():
     def __init__(self, input) -> None:
         self.input = input
         self.output = ''
-        pass
 
     def addLine(self, string):
         self.output += f'{string}\n'
@@ -16,8 +15,8 @@ class View():
     def endCodeBlock(self):
         self.output += "\n```\n"
 
-    def prepareOutput(self) -> str:
-        self.output = "Default Output"
+    def prepareOutput(self):
+        self.addLine("Default Output")
 
     def createOutput(self) -> str:
         self.prepareOutput()

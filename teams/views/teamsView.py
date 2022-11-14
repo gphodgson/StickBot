@@ -7,4 +7,4 @@ class TeamsView(View):
         self.startCodeBlock()
         for team in self.input:
             self.addLine(f'{team.name}: {team.id}')
-        self.endCodeBlock
+        self.endCodeBlock()

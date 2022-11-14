@@ -4,7 +4,8 @@ import responses
 async def send_msg(msg, usr_msg, is_private, client):
     try:
         response = await responses.handle_response(usr_msg, msg, client);
-        await msg.author.send(response) if is_private else await msg.channel.send(response)
+        if response:
+            await msg.author.send(response) if is_private else await msg.channel.send(response)
         # embed = discord.embeds.Embed(
         #     title="test Title",
         #     description= "This is apparently a description",
