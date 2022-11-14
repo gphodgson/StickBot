@@ -6,7 +6,6 @@ from teams.views.teamView import TeamView
 class TeamController():
     def __init__(self, requestService) -> None:
         self.requestService = requestService
-        self.input = input
         self.teamService = TeamService(self.requestService)
 
     def handleInput(self, input) -> View:

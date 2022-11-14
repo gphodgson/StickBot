@@ -1,10 +1,15 @@
 import discord
 import responses
 
-async def send_msg(msg, usr_msg, is_private):
+async def send_msg(msg, usr_msg, is_private, client):
     try:
-        response = responses.handle_response(usr_msg);
+        response = await responses.handle_response(usr_msg, msg, client);
         await msg.author.send(response) if is_private else await msg.channel.send(response)
+        # embed = discord.embeds.Embed(
+        #     title="test Title",
+        #     description= "This is apparently a description",
+        # )
+        # await msg.channel.send(embed=embed)
     except Exception as err:
         print(err)
 
@@ -30,8 +35,8 @@ def run_discord_bot(token):
 
         if usr_msg[0] == '?':
             usr_msg = usr_msg[1:]
-            await send_msg(msg, usr_msg, is_private=True)
+            await send_msg(msg, usr_msg, is_private=True, client=client)
         else:
-            await send_msg(msg, usr_msg, is_private=False)
+            await send_msg(msg, usr_msg, is_private=False, client=client)
 
     client.run(TOKEN)
