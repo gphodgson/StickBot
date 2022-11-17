@@ -1,0 +1,2 @@
+class JoinChannelException(Exception):
+    pass

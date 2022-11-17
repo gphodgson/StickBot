@@ -39,5 +39,5 @@ class Router():
                 self.output_view = teamController.handleInput(request)
             
             else:
-                self.output_view = InvaildRequestView();
+                self.output_view = InvaildRequestView([]);
             
