@@ -8,7 +8,6 @@ class TeamService():
 
     def __init__(self, requestService) -> None:
         self.requestService = requestService
-        pass
 
     def getTeamFromId(self, id) -> Team:
         response = self.requestService.makeGetRequest(self.URI_EXTENSTION + f'{id}', {"expand": "team.stats"})

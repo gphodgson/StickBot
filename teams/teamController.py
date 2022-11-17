@@ -1,4 +1,4 @@
-from domain.view import View
+from domain.view.view import View
 from teams.teamService import TeamService
 from teams.views.teamsView import TeamsView
 from teams.views.teamView import TeamView

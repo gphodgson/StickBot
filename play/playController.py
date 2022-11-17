@@ -1,5 +1,5 @@
-from domain.blankView import BlankView
-from domain.view import View
+from domain.view.blankView import BlankView
+from domain.view.view import View
 from play.YTDLSource import YTDLSource
 from play.views.joinChannelView import JoinChannelView
 from play.views.stopPlayingView import StopPlayingView

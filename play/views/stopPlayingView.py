@@ -1,4 +1,4 @@
-from domain.view import View
+from domain.view.view import View
 
 class StopPlayingView(View):
     def prepareOutput(self):

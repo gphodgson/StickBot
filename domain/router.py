@@ -1,4 +1,4 @@
-from domain.invaildRequestView import InvaildRequestView
+from domain.view.invaildRequestView import InvaildRequestView
 from nhlRequest.nhlRequestService import nhlRequestService
 from play.playController import PlayController
 from teams.teamController import TeamController

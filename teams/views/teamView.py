@@ -1,4 +1,4 @@
-from domain.view import View
+from domain.view.view import View
 class TeamView(View):
     def prepareOutput(self) -> str:
         self.addLine(f'**{self.input.name}**')
